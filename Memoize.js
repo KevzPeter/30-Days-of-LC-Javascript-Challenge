@@ -57,3 +57,6 @@ function memoize(fn) {
  * memoizedFn(2, 3) // 5
  * console.log(callCount) // 1 
  */
+
+// One Liner
+let memoize = (fn, cache = {}) => (...args) => cache[args.join()] ?? (cache[args.join()] = fn(...args)) 
